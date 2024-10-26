@@ -3,6 +3,7 @@
 This is just a tiny code which applys:
 * Hill Climbing Search
 * Beam Search
+  
 In order to solve 8 queens puzzle.
 
 ### 2. Version info:
