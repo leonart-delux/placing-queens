@@ -6,7 +6,7 @@ This is just a tiny code which applys:
   
 In order to solve 8 queens puzzle.
 
-Heuristic value I use is number of facing queen pairs (no matter if any queens is in the middle).
+Heuristic value I use is number of facing queen pairs (regardless of whether there is a queen in the middle or not).
 
 ### 2. Version info:
 This project is built on python 3.13.0.
