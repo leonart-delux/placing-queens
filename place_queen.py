@@ -32,7 +32,7 @@ class QueenChess:
 
     def draw_board(self):
         # delete old board
-        self.chessboard.delete(all)
+        self.chessboard.delete(tk.ALL)
 
         for row in range(8):
             for col in range(8):
@@ -55,6 +55,11 @@ class QueenChess:
         # facing pairs
         facing_pairs = self.get_numb_faceable_pairs(self.queens_places)
         self.facing_pairs_label.config(text=f"Facing pairs: {facing_pairs}")
+
+        # update UI
+        self.root.update_idletasks()
+        time.sleep(1)
+
 
     def create_function_buttons(self):
         button = tk.Button(self.root, text="Shuffle", width=10, height= 2, command=lambda: self.shuffle_queens())
@@ -114,6 +119,7 @@ class QueenChess:
 
             if improved:
                 self.queens_places = next_state
+                # illustration
                 self.draw_board()
             else:
                 best_state = True
@@ -174,8 +180,6 @@ class QueenChess:
         for state in reversed(result):
             self.queens_places = state
             self.draw_board()
-
-        
 
 if __name__ == "__main__":
     root = tk.Tk()
